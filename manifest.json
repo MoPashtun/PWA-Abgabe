@@ -1,0 +1,22 @@
+{
+    "name": "OCR",
+    "short_name": "OCR",
+    "start_url": "/index.html",
+
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#64a0d3",
+    "orientation": "portrait-primary",
+    "icons": [
+   
+      {
+        "src": "/img/icon-144x144.png",
+        "type": "image/png", "sizes": "144x144"
+      },
+      
+      {
+        "src": "/img/icon-512x512.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }
