@@ -209,6 +209,7 @@
         Tesseract.recognize(ctx).then(function (result) {
             var resultText = result.text ? result.text.trim() : '';
             localStorage.setItem("value", resultText);
+            console.log(localStorage.getItem("value"));
             //show the result
             spinner.hide();
             $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
