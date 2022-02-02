@@ -6,6 +6,7 @@
 
     var fxCanvas = null;
     var texture = null;
+    
 
     function checkRequirements() {
         var deferred = new $.Deferred();
@@ -176,6 +177,7 @@
             //show output from glfx.js
             .attr('src', fxCanvas.toDataURL());
     }
+    
 
     function step3() {
         var canvas = document.querySelector('#step3 canvas');
@@ -207,17 +209,20 @@
 
         // do the OCR!
         Tesseract.recognize(ctx).then(function (result) {
+            var counter = 1;
+            
             var resultText = result.text ? result.text.trim() : '';
-            localStorage.setItem("value", resultText);
+            localStorage.setItem("value" + counter.toString, resultText);
             console.log(localStorage.getItem("value"));
             //show the result
             spinner.hide();
             $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
             // $('blockquote p').html('&bdquo;' + localStorage.value + '&ldquo;');
             $('blockquote footer').text('(' + resultText.length + ' characters)');
+            counter = counter++;
         });
     }
-
+   
     /*********************************
      * UI Stuff
      *********************************/

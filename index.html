@@ -91,14 +91,20 @@
         <!-- <h3 class="text-muted">JavaScript OCR demo</h3> -->
     </div>
 
-   
+<div class = "Cache Löschen">
+    <input type="button" value="Local Cache löschen" onclick="localStorageloeschen()">
+</div>
 
     <div class="footer">
       
 
 </div>
 <!-- /container -->
-
+<script>
+    function localStorageloeschen() {
+        localStorage.clear();
+        }
+</script>
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="js/vendor/modernizr.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
