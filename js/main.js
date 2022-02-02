@@ -212,7 +212,7 @@
             //show the result
             spinner.hide();
             $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
-            $('blockquote p').html('&bdquo;' + localStorage.value + '&ldquo;');
+            // $('blockquote p').html('&bdquo;' + localStorage.value + '&ldquo;');
             $('blockquote footer').text('(' + resultText.length + ' characters)');
         });
     }
