@@ -213,7 +213,7 @@
             
             var resultText = result.text ? result.text.trim() : '';
             localStorage.setItem("value" + counter.toString, resultText);
-            console.log(localStorage.getItem("value"));
+            // console.log(localStorage.getItem("value"));
             //show the result
             spinner.hide();
             $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
