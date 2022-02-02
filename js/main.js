@@ -206,10 +206,10 @@
         spinner.show();
         $('blockquote p').text('');
         $('blockquote footer').text('');
-
+        var counter = 1;
         // do the OCR!
         Tesseract.recognize(ctx).then(function (result) {
-            var counter = 1;
+            
             
             var resultText = result.text ? result.text.trim() : '';
             localStorage.setItem("value" + counter.toString, resultText);
