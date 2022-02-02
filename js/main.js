@@ -208,10 +208,11 @@
         // do the OCR!
         Tesseract.recognize(ctx).then(function (result) {
             var resultText = result.text ? result.text.trim() : '';
-
+            localStorage.setItem("value", resultText);
             //show the result
             spinner.hide();
             $('blockquote p').html('&bdquo;' + resultText + '&ldquo;');
+            $('blockquote p').html('&bdquo;' + localStorage.value + '&ldquo;');
             $('blockquote footer').text('(' + resultText.length + ' characters)');
         });
     }
