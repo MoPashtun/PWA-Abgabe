@@ -13,7 +13,7 @@
 
         //Check if getUserMedia is available
         if (!Modernizr.getusermedia) {
-            deferred.reject('Your browser doesn\'t support getUserMedia (according to Modernizr).');
+            deferred.reject('Dein Browser supportet getUserMedia nicht (according to Modernizr).');
         }
 
         //Check if WebGL is available
@@ -114,7 +114,7 @@
                     }
                 }, false);
             }).catch(function () {
-                deferred.reject('There is no access to your camera, have you denied it?');
+                deferred.reject('Bitte geben Sie ihre Kamera frei!');
             });
 
         return deferred.promise();
